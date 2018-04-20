@@ -1,0 +1,60 @@
+<style>
+  /* CLEANUP */
+  .pt_customer-service .primary-content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .pt_customer-service .primary-content:after {
+    width: 100%;
+    right: 0;
+  }
+  /* END CLEANUP */
+
+  body, p {
+    font-family: Montserrat,Arial,sans-serif;
+    font-size: 1em;
+  }
+
+  .articleWrapper figure {
+    display: inline;
+    margin-right: 1em;
+    float: left;
+  }
+  .articleWrapper figure img {
+    display: block;
+  }
+
+  .articleWrapper header div.headerText p {
+    margin-bottom: .5em;
+    width: 94%;
+  }
+  .articleWrapper section {
+    margin: 1em 0;
+  }
+  .articleWrapper section div.glueString {
+    padding-top: 5em;
+  }
+  
+  /* Tablet/Small Desktop Screen */
+  @media (min-width: 768px) and (max-width: 1279px) {
+    img.ap-hero-banner {
+      width: 100%;
+    }
+  }
+  /* Mobile Screen */
+  @media (min-width: 320px) and (max-width: 768px) {
+    body, p {
+      font-size: .9em;
+    }
+    .articleWrapper figure {
+      margin-bottom: 1em;
+    }
+    .articleWrapper header div.headerText img {
+      width: 90%;
+    }
+    .articleWrapper section div.glueString {
+      padding-top: 0;
+    }
+  }
+</style>

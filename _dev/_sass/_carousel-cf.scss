@@ -1,0 +1,117 @@
+// CAROUSEL STYLE
+.category-landing .slider-wrapper .slider-title, .recommendation-header {
+	font-family:'Montserrat', Arial, Helvetica, sans-serif;
+}
+.jcarousel {
+	margin: 0 auto;
+	@media only screen and (max-width: 767px) and (min-width: 320px) {
+		width: 100%;
+	}
+	@media only screen and (max-width: 1024px) and (min-width: 768px) {
+		width: 100%;
+	}
+}
+.jcarousel ul li.grid-tile {
+	background: transparent;
+	box-shadow: none;
+	float: left;
+	list-style: none outside none;
+	margin: 0 3em 0 0;
+	padding: 0;
+	width: 196px;
+	height: 345px;
+	box-sizing: border-box;
+	border: 1px solid #fff;
+	@media only screen and (max-width: 767px) and (min-width: 320px) {
+		width: 160px;
+	}
+}
+.slider-wrapper.horizontal-slider {
+	padding: 0;
+}
+.slider-wrapper .slider-title {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 2em;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 1em;
+}
+.slider-wrapper .product-tile .product-name {
+	background: #fff;
+	display:inline-block;
+	margin: 0;
+	padding: 10px 10px 0;
+	box-sizing: border-box;
+	text-align: center;
+	font-family: "Montserrat", Arial, sans-serif;
+	color: #333;
+	font-size: 1em;
+	text-transform: capitalize;
+	width:inherit;
+}
+.slider-wrapper .product-image {
+	padding: 0;
+	margin: 20px auto 0;
+	min-height: 150px;
+	float: none !important;
+}
+.slider-wrapper .product-image a {
+	display: block;
+}
+.slider-wrapper .product-pricing {
+	padding: 0;
+	display: block;
+	width: 100%;
+	clear: both;
+	text-align: center;
+}
+.slider-wrapper .product-pricing .product-sales-price {
+	font-size: 13.6px;
+	color: #999;
+	float:none;
+}
+.carousel-img-layer {
+	display: none;
+}
+.pt_product-search-result .product-pricing .product-discounted-price span {
+	text-align:center;
+}
+
+.slider-control .control {
+	@media only screen and (max-width: 767px) and (min-width: 320px) {
+		display: block;
+	}
+}
+.slider-control .control a.jcarousel-control-prev {
+	left: 0;
+}
+.slider-control .control a.jcarousel-control-next {
+	right: 0;
+}
+
+.slider-wrapper span.product-standard-price + span.product-sales-price {
+	color: #9c2d49;
+	font-weight: normal;
+}
+
+.slider-wrapper .product-pricing, div.product-pricing > span.product-sales-price {
+	font-size: .813em;
+	font-weight: normal;
+	color: #999;
+}
+.product-slider .slider-wrapper.horizontal-slider {
+	@media only screen and (max-width: 767px) and (min-width: 320px) {
+		width: 100%;
+	}
+	@media only screen and (max-width: 1024px) and (min-width: 768px) {
+		width: 100%;
+		max-width: 1024px;
+	}
+}
+
+.slider-wrapper .product-tile .product-name a {
+	text-align:center;
+	@media only screen and (max-width: 1024px) and (min-width: 768px) {
+		text-transform: capitalize;
+	}
+}

@@ -1,0 +1,495 @@
+<!-- CF-custom-framing.html 2016.04.08 -->
+<script>
+  // Picture element HTML5 shiv
+  document.createElement( "picture" );
+
+  function now(){
+      window.location.reload(true);
+  }
+</script>
+<script src="js/picturefill.min.js?$staticlink$" async></script>
+<script src="js/jquery.cycle2.min.js?$staticlink$" async></script>
+
+<!--  CF Store Locator Style -->
+<style>
+	#storeFinder {
+		position: relative;
+		z-index: 5;
+		margin: auto;
+		min-height: 195px;
+	}
+	#storeFinder img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		float: none;
+		margin: auto;
+	}
+	#addressline {
+		float: none;
+		position: relative;
+		top: 100px;
+		z-index: 5;
+		width: 40%;
+		height: 12px;
+		margin: auto;
+		text-align: center;
+	}
+	.find-store-btn {
+		top: 108px;
+		z-index: 5 !important;
+		position: relative;
+		font-size: .7em;
+	}
+
+	p.disclaimer {
+		font-size: .6rem !important;
+		text-align: left;
+	}
+
+	div#cf-offer {
+		height: auto !important;
+		/*min-height: 328px;*/
+	}
+	section.full.videoBlock {
+		background-color: #e4e4e4;
+	}
+	.videoBlockRight {
+	    margin: 1em;
+	}
+	section.full.videoBlock .videoBlockRight h4 {
+	    font-size: 1.2em !important;
+	}
+	section.full.videoBlock .videoBlockRight p {
+	    font-size: 0.75em;
+	    margin: 0 .75em;
+	}
+	.articleWrapper a {
+	    display: inline;
+	}
+
+	/* VIDEO */
+	.embed-video-test {
+		margin: 20em auto;
+	}
+
+
+	.video-wrapper {
+		position: relative;
+	}
+	.video-wrapper iframe {
+		margin-left: -1em;
+	}
+	.video-wrapper .video-poster {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		cursor: pointer;
+	}
+	.videos .thumbnail {
+		cursor: pointer;
+	}
+
+	/* mobile drawer */
+	#mobileDrawer {
+		display: block;
+		position: fixed;
+		bottom: 0;
+		margin: 0 auto;
+		max-height: 40px;
+		background: #333;
+		width: 100%;
+		z-index: 9999;
+	}
+	div#drawerCoupon, div#drawerStore  {
+		width: 49%;
+		background: #333;
+		display: inline-block;
+	}
+	div#drawerCoupon,  {
+		border-right: 1px solid #666;
+	}
+	div#drawerStore  {
+		border-left: 1px solid #666;
+	}
+	div#drawerCoupon a, div#drawerStore a {
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+	div#mobileDrawer div>a>img {
+		position: relative;
+		margin: .5em;
+		height: 30px;
+		width: auto;
+	}
+  /* Phone/Mobile */
+  @media (max-width: 767px) {
+  	section.full.videoBlock {
+  	    background-color: #e4e4e4;
+  	    height: 26.25em;
+  	    margin-bottom: 1em;
+  	}
+
+    section.full.videoBlock .videoBlockRight .videoThumbnails li {
+      display: inline-block;
+      cursor: pointer;
+      text-align: center;
+      margin: 0 1em 0 0;
+      width:26%;
+    }
+  }
+	/* Tablet/Small Desktop Screen */
+	@media (min-width: 768px) and (max-width: 1279px) {
+
+		#addressline {
+			top: 108px;
+		}
+		.find-store-btn {
+			top: 116px;
+		}
+		div#cf-offer {
+			min-height: 195px;
+		}
+		section.full.videoBlock {
+			background-color: #e4e4e4;
+			height: 210px;
+			margin-bottom: .75em;
+		}
+		section.full.videoBlock .videoBlockRight {
+      float: right;
+      width: 44%;
+      text-align: left;
+      margin: 0.5em 1em;
+		}
+		section.full.videoBlock .videoBlockRight h4 {
+		    font-size: .7em !important;
+		}
+		section.full.videoBlock .videoBlockRight p {
+		    font-size: 0.75em;
+		    margin: 0;
+		}
+    section.full.videoBlock .videoBlockRight .videoThumbnails li {
+      display: inline-block;
+      cursor: pointer;
+      text-align: center;
+      margin: 0 1em 0 0;
+    }
+    .video-wrapper {
+      width: 52%;
+      height: 100%;
+		}
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 0;
+    }
+
+		/* mobile drawer */
+		#mobileDrawer {
+			display: none;
+		}
+	}
+
+
+	/* Tablet/Small Desktop Screen portrait */
+	@media (min-width : 768px) and (max-width : 1279px) and (orientation : portrait) {
+
+		#addressline {
+			top: 120px;
+		}
+		.find-store-btn {
+			top: 130px;
+		}
+		section.full.videoBlock .videoBlockRight {
+		    width: 44%;
+		}
+		section.full.videoBlock .videoBlockRight h4 {
+		    font-size: .95em !important;
+		}
+
+		/* mobile drawer */
+		#mobileDrawer {
+			display: none;
+		}
+	}
+
+
+	/* Desktop */
+	@media (min-width: 1280px) {
+
+		#addressline {
+			top: 145px;
+		}
+		.find-store-btn {
+			top: 162px;
+			font-size: .875em;
+		}
+		div#cf-offer {
+			min-height: 195px;
+		}
+		section.full.videoBlock {
+			background-color: #e4e4e4;
+			height: 267px;
+		}
+		section.full.videoBlock .videoBlockRight {
+      float: right;
+      width: 42.5%;
+      text-align: left;
+      margin: 1em;
+		}
+		section.full.videoBlock .videoBlockRight p {
+		    margin: 0;
+		}
+    section.full.videoBlock .videoBlockRight .videoThumbnails li {
+      display: inline-block;
+      cursor: pointer;
+      text-align: center;
+      margin: 0 1em 0 0;
+    }
+    section.full.videoBlock .videoBlockRight .videoThumbnails li p {
+      margin: 0;
+    }
+		.video-wrapper {
+		    /* position: relative;
+		    left: -10px; */
+      width: 54%;
+      height: 100%;
+		}
+		/* mobile drawer */
+		#mobileDrawer {
+			display: none;
+		}
+	}
+</style>
+
+<!--  Markup  -->
+<div class="cm-ids display-none" data-page-id="Why Custom Framing" data-category-id="Custom Framing"></div>
+<article class="articleWrapper white">
+  <header class="hero">
+    <img class="ap-hero-banner" srcset="/images/article/customframing/article-CF-lp-01-hero_021016.jpg?$staticlink$" alt="Custom Framing">
+  </header>
+
+  <section class="full padTop padBottom">
+    <img src="/images/article/customframing/article-CF-lp-02-full.png?$staticlink$" alt="Michaels Custom Framing">
+  </section>
+
+  <section class="full">
+    <!-- <div class="half right hideMobile halfVid">
+      <iframe width="475" height="267" class="lightBorder" src="https://www.youtube.com/embed/e8rv5B8F0l0" frameborder="0" allowfullscreen></iframe>
+    </div> -->
+    <div class="full left textLeft">
+      <p>Whether you need a frame for your family portrait or a gallery wall of prints, our <a href="$httpUrl(Page-Show,cid,custom-framing-experts,ecgid,custom-framing)$">Certified Framing Experts</a> can create the custom frame your art deserves. We’ll help you choose the perfect frame from over 450 <a href="$httpUrl(Page-Show,cid,custom-frames,ecgid,custom-framing)$">mouldings</a>, over 300 <a href="$httpUrl(Page-Show,cid,mats-glass-framing-supplies,ecgid,custom-framing)$">archival mats</a> and four <a href="$httpUrl(Page-Show,cid,mats-glass-framing-supplies,ecgid,custom-framing)$">UV-blocking glazings</a>.<br><br>At your free consultation, you’ll be able to view your frame in multiple room settings with our visualizer. You’ll leave the store knowing exactly what your custom frame or shadow box will look like, how much you’ll pay and that your art is being taken care of properly—it’s framed right there in the store where you drop it off.</p>
+    </div>
+  </section>
+
+  <section class="full videoBlock">
+    <div class="videoBlockRight">
+      <h4>A FRAME AS UNIQUE AS YOU</h4>
+      <p>To us, a custom frame is about more than dimensions and colors. Learn how we make each frame perfect for the art it holds from someone who's experienced it firsthand.</p>
+      <ul class="videoThumbnails">
+        <li>
+          <a href="#" class="play-video" data-videoID="kFP10sMlLCY" data-videoW="475" data-videoH="276">
+            <img src="/images/article/customframing/custom-frame-video-thumb-01.jpg?$staticlink$" alt="Jessica" />
+          </a>
+          <p>Jessica</p>
+        </li>
+        <li>
+          <a href="#" class="play-video" data-videoID="zeIdCWX0IT0" data-videoW="475" data-videoH="276">
+            <img src="/images/article/customframing/custom-frame-video-thumb-02.jpg?$staticlink$" alt="Carrie" />
+          </a>
+          <p>Carrie</p>
+        </li>
+        <li>
+          <a href="#" class="play-video" data-videoID="TiAMvVWy2Hg" data-videoW="475" data-videoH="276">
+            <img src="/images/article/customframing/custom-frame-video-thumb-03.jpg?$staticlink$" alt="Marlen" />
+          </a>
+          <p>Marlen</p>
+        </li>
+      </ul>
+    </div>
+    <div class="video-wrapper">
+    <a href="#" class="video-poster play-video" data-videoID="TiAMvVWy2Hg" data-videoW="475" data-videoH="276">
+			<img src="/images/article/customframing/custom-frame-video-poster-03.jpg?$staticlink$" alt="My Custom Frame Story">
+		</a>
+		<!-- <div id="ytplayer" class="video-embed"></div> -->
+		<iframe id="ytplayer" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+	</div>
+  </section>
+
+  <section class="full">
+    <a href="$httpUrl(Page-Show,cid,custom-frames,ecgid,custom-framing)$">
+      <picture>
+        <!--[if IE 9]><video style="display: none;"><![endif]-->
+        <source srcset="/images/article/customframing/article-CF-lp-04-full2-s.jpg?$staticlink$" media="(max-width: 767px)">
+        <!--[if IE 9]></video><![endif]-->
+        <img class="ap-hero-banner" srcset="/images/article/customframing/article-CF-lp-04-full2.jpg?$staticlink$" alt="Beautifully Designed Frames">
+      </picture>
+    </a>
+  </section>
+
+  <section class="full padTop">
+    <a href="$httpUrl(Page-Show,cid,mats-glass-framing-supplies,ecgid,custom-framing)$">
+      <picture>
+        <!--[if IE 9]><video style="display: none;"><![endif]-->
+        <source srcset="/images/article/customframing/article-CF-lp-05-full-s.jpg?$staticlink$" media="(max-width: 767px)">
+        <!--[if IE 9]></video><![endif]-->
+        <img class="ap-hero-banner" srcset="/images/article/customframing/article-CF-lp-05-full.jpg?$staticlink$" alt="The Finishing Touches">
+      </picture>
+    </a>
+  </section>
+
+  <!-- <section class="full padTop padBottom">
+    <a href="$httpUrl(Page-Show,cid,frame-express,ecgid,custom-framing)$">
+      <img src="/images/article/customframing/article-CF-lp-06-full.png?$staticlink$">
+    </a>
+  </section> -->
+
+  <section class="full padTop">
+    <div class="half left" id="cf-offer">
+      <a href="http://weeklyad.michaels.com/coupons/">
+        <img src="/images/article/customframing/article-CF-lp-07-half-left.jpg?$staticlink$" alt="Custom Framing">
+      </a>
+    </div>
+    <div class="half right" id="storeFinder">
+
+      <input id="addressline" type="tel" value="" placeholder="Enter Zip Code"></input>
+        <button class="primary-button arrow-btn find-store-btn" value=""><span>Find a store</span></button>
+        <img src="/images/article/customframing/article-CF-lp-07-half-right.jpg?$staticlink$" alt="Find a Framing Expert">
+    </div>
+  </section>
+
+  <section class="full padTop">
+    <div class="half left">
+      <a href="/store-locator">
+        <img src="/images/article/customframing/value_designs_block.jpg?$staticlink$" alt="Bundle & Save">
+      </a>
+    </div>
+    <div class="half right">
+      <a href="$httpUrl(Page-Show,cid,frame-express)$">
+        <img src="/images/article/customframing/express_block.jpg?$staticlink$" alt="Custom Frame Express">
+      </a>
+    </div>
+  </section>
+
+  <section class="full padTop">
+    <a href="$httpUrl(Page-Show,cid,custom-frames-faq,ecgid,custom-framing)$">
+      <picture>
+        <!--[if IE 9]><video style="display: none;"><![endif]-->
+        <source srcset="/images/article/customframing/article-CF-lp-09-full-s.jpg?$staticlink$" media="(max-width: 767px)">
+        <!--[if IE 9]></video><![endif]-->
+        <img class="ap-hero-banner" srcset="/images/article/customframing/article-CF-lp-09-full.jpg?$staticlink$" alt="Custom Framing FAQ">
+      </picture>
+    </a>
+  </section>
+
+  <section class="full">
+    <p class="disclaimer">* Must provide written competitor’s custom framing estimate or promotional offer/coupon dated within last 30 days. Only valid for same dimensions, glass and mat type, and selected in-stock moulding width must be within 1/2”. Discount applied before taxes. Not valid on past purchases. Conditions may apply. Valid only in US. See a Certified Framing Expert for details.</p>
+  </section>
+
+</article>
+
+<!-- Dialog Box -->
+<div id="cf-dialog" class="dialogContent display-none">
+	<a href="$httpUrl(Product-Show,pid,10228231)$" title="Join Now" manual_cm_sp="dialogbox-_-custom-framing-giftcard-_-modal">
+		<img src="images/article/customframing/Custom_Frame_Modal.png?$staticlink$" alt="Join Michaels Rewards">
+	</a>
+</div>
+
+<!-- MOBILE DRAWERS -->
+<div id="mobileDrawer">
+  <div id="drawerCoupon"><a href="http://weeklyad.michaels.com/coupons/?cm_sp=msite-_-drawer-_-coupon"><img src="images/drawer-coupon@2x.png?$staticlink$" alt="COUPONS"></a></div>
+  <div id="drawerStore"><a href="/store-locator?cm_sp=msite-_-drawer-_-locator" ><img src="images/drawer-stores@2x.png?$staticlink$" alt="STORES"></a></div>
+</div>
+
+
+<script>
+	$('body').on('click','.play-video', function(e){
+		e.preventDefault();
+		var videoId = $(this).attr('data-videoID');
+		$('#ytplayer').attr('src','https://www.youtube.com/embed/'+videoId+'?enablejsapi=1&autoplay=1');
+		$('.video-poster').fadeOut();
+	});
+
+  // Dialog box cookie functions
+  function setESCookie(cname, cvalue, exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = "expires="+d.toUTCString();
+		document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/";
+	}
+	function getESCookie (name,value) {
+	    var found = false;
+	    var cookies = document.cookie.split(";");
+	    for (var i = 0,ilen = cookies.length;i<ilen;i++) {
+	         var cookie = cookies[i].split("=");
+	         if(name == cookie[0].trim() && (!value || value == cookie[1].trim())) {
+	              return found=true;
+	         }
+	     }
+	     return found;
+	};
+	function checkURLPath(name) {
+		// console.log( window.location.pathname );
+		if ( window.location.href.indexOf(name) > -1 ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	$(document).ready(function(){
+	    $.get('/', function(data){
+	       if( $(data).find(".tier1-container a[href*='custom-framing.html'] img").length ) {
+	         console.log('Show');
+           var dImage = $(data).find(".tier1-container a[href*='custom-framing.html'] img");
+	         $('#cf-offer a').html(dImage).parent().css({
+	           'height':268,
+	           'margin-top':12
+	         });
+	       }
+	     });
+
+	    $('.find-store-btn').on('click', function(){
+	      var address;
+	      if ( ($('#addressline').val() != "") || ($('#addressline').val() != undefined ) ) {
+	        address = $('#addressline').val();
+	      } else {
+	        address = '75063';
+	      }
+	      window.location = "/store-locator?addressline=" + address;
+	    });
+
+
+      // Dialog box
+      var cookieName = 'cf-db';
+
+  		// Check to see if cookie is set and is true or false
+  		console.log('Cookie: ' + getESCookie(cookieName) );
+
+  		var fnt = getESCookie(cookieName, 'true');
+  		if (fnt === false) {
+  			var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  			var dialogWidth = 640;
+  			if( userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) || userAgent.match( /Android/i ) ) {
+  				dialogWidth = 290;
+  			} else {
+  				// Create Dialog box for email signup
+  				app.dialog.create({
+  					target: $("#cf-dialog"),
+  					options: {
+  						autoOpen: false,
+  						width: dialogWidth,
+              height: 380,
+  						dialogClass: 'reward-popup'
+  					}
+  				});
+  				setESCookie(cookieName, 'true', 7);
+  				$('#cf-dialog').dialog('open');
+  				$('.ui-dialog-titlebar-close').attr('href','/?cm_sp=dialogbox-_-custom-framing-_-closebtnemailsignget');
+  			}
+  		}
+	  });
+</script>

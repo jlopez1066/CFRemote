@@ -1,0 +1,63 @@
+/* Author: Chaney Credeur
+* Updated for Custom Framing: Joe Lopez
+* Created: 06/18/15
+* Last Modified: 2017-8-30
+**
+* Clean Up
+* -------------- */
+
+.pt_product-search-result {
+	#main {
+		@media only screen and (min-width:1000px) and (max-width: 1279px) {
+			padding:0;
+			width: 95%;
+		}
+		@media only screen and (min-width:426px) and (max-width: 1000px) {
+			width: 100%;
+		}
+	}
+	.category-landing-container {
+		.category-landing {
+			margin: 0 auto;
+			position: relative;
+			width: 100%;
+			@media only screen and (min-width:426px) and (max-width: 1279px) {
+				min-width: auto;
+				max-width: 100%;
+			}
+			#secondary {
+				display: none; 
+			}
+			.breadcrumb {
+				display: none; 
+			}
+			#primary.primary-content {
+				background: transparent;
+				box-sizing: border-box;
+				float: none;
+				margin-top:0;
+				padding: 0;
+				width: 100% !important;
+				&:after {
+					background: none; 
+					width: 100%;
+					right: 0; 
+				}
+				@media only screen and (max-width: 1280px) and (min-width: 426px) {
+					margin-top: 0 !important;
+					padding:0;
+					width: 100% !important;
+				}
+				@media only screen and (min-width:1280px) {
+					margin-top:16px !important;
+				}
+				.category-header.is-tablet-mobile {
+					display: none !important;
+				}
+				.category-banner {
+					margin-top:23px;
+				}
+			}
+		}
+	}
+}

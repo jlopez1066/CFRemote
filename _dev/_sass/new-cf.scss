@@ -1,0 +1,121 @@
+@import "var";
+@import "cleanup";
+@import "simplegrid";
+@import "carousel-cf";
+
+.pt_customer-service .contact-us-container #secondary, .pt_customer-service .contact-us-container #secondary {
+	display:none;
+}
+.pt_customer-service .primary-content {
+	@media only screen and (max-width: 767px) and (min-width: 320px) {
+		max-width: 100%;
+	}
+}
+div.pt_customer-service div#main {
+	@media only screen and (max-width: 767px) and (min-width: 320px) {
+		margin-top: 0 !important;
+	}
+}
+.new-CF-container {
+	@media only screen and (max-width: 767px) and (min-width: 320px) {
+		margin:0 auto;
+		width: 93%;
+	}
+}
+.new-CF-locate {
+	background: #000;
+	height: 40px;
+	padding:0.5em 0;
+	width: 100%;
+	&img {
+		margin:auto;
+		max-width: 100%;
+		width: initial;
+	}
+	&a {
+		text-align: center;
+		vertical-align: middle;
+		position: relative;
+		padding-top: 1.5em;
+	}
+	&.new-CF-locate div:first-child {
+		float: none;
+		margin: auto;
+		text-align: center;
+	}
+}
+div.new-CF-locate-text, div.new-CF-locate-button {
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+	}
+div.new-CF-locate-text {
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+div.new-CF-locate-text img {
+	@media only screen and (max-width: 767px) and (min-width: 320px) {
+		width: 80%;
+	}
+}
+.new-CF-locate div.new-CF-locate-button {
+	width: 10%;
+}
+button.primary-button.arrow-btn.find-store-btn {
+	padding: .5em 1em .5em .5em;
+	background: #d9ac5d;
+}
+
+.new-CF-locate, .grid-item {
+	@media only screen and (max-width: 767px) and (min-width: 320px) {
+		margin-bottom: 1em;
+	}
+}
+header.new-CF-hero img, .grid-item img {
+	@media only screen and (max-width: 767px) and (min-width: 320px) {
+		width: 100%;
+	}
+}
+// CAROUSEL STYLE
+section.carousel {
+	margin: 0 0 12px;
+	padding: 24px 4px;
+	overflow: hidden;
+	box-sizing: border-box;
+	border: 5px solid #ededed;
+}
+section.carousel h4 {
+	text-align: center;
+	margin: 0 auto 24px;
+}
+ul.carousel-container {
+	width: 100%;
+	margin: 0;
+	padding: 0 48px;
+}
+button.slick-arrow {
+	top: 35%;
+	background: none;
+}
+button.slick-arrow::before {
+	color: #d9ac5d;
+}
+li.slick-slide {
+	display: inline-block;
+}
+li.slick-slide img {
+	width: 100%;
+}
+#pinterest-header {
+	text-align: center;
+}
+#pinterest-header h3 {
+	font-weight: bold;
+	letter-spacing: .12em;
+}
+#disclaimer {
+	text-align: center;
+	font-size: .6em;
+}

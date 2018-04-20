@@ -1,0 +1,46 @@
+<style>
+	.searchpromo-left a {
+	    padding: 0 !important;
+	    margin: auto auto -3px;
+	}
+</style>
+
+<!-- ca: CustomFraming-leftnav -->
+
+<!-- <div class="static-content-leftnav">
+	<h3 class="title">Custom Framing</h3>
+	<ul>
+		<li><a href="$httpUrl(Page-Show,cid,custom-framing,ecgid,custom-framing)$" title="Custom Framing">Why Custom</a></li>
+		<li><a href="$httpUrl(Page-Show,cid,custom-frames,ecgid,custom-framing)$" title="Custom Framing">Frames</a></li>
+		<li><a href="$httpUrl(Page-Show,cid,mats-glass-framing-supplies,ecgid,custom-framing)$" title="Custom Framing">Mats, Glass &amp; Supplies</a></li>
+		<li><a href="$httpUrl(Page-Show,cid,frame-express,ecgid,custom-framing)$" title="Custom Framing">Frame Express</a></li>
+		<li><a href="$httpUrl(Page-Show,cid,custom-framing-experts,ecgid,custom-framing)$" title="Custom Framing">About Us</a></li>
+		<li><a href="$httpUrl(Page-Show,cid,custom-frames-faq,ecgid,custom-framing)$" title="Custom Framing">FAQ</a></li>
+	</ul>
+</div> -->
+
+<!-- promo-top -->
+<div class="searchpromo-left shadow-left" style="padding: 0; width: auto;">
+	<a href="/store-locator">
+		<img src="/images/article/customframing/CF-sidebar-locator-040816.png?$staticlink$" alt="Locate your expert">
+	</a>
+</div>
+
+<!-- promo-bottom -->
+<div class="searchpromo-left shadow-left cf-offer-left" style="padding: 0; width: auto;">
+	<a href="http://weeklyad.michaels.com/coupons/">
+		<img src="/images/article/customframing/CF-sidebar-coupon-040816.png?$staticlink$" alt="Custom Frame for less">
+	</a>
+</div>
+
+<script>
+$(document).ready(function(){
+	    $.get('/', function(data){
+	       if( $(data).find(".tier1-container a[href*='custom-framing.html'] img").length ) {
+	         console.log('Show');
+           var sImage = $(data).find(".tier1-container a[href*='custom-framing.html'] source").attr("srcset");
+	        $('.cf-offer-left a').html('<img src="'+sImage+'" alt="Custom Framing Offer" width="176" />');
+	       }
+	     });
+	  });
+</script>
